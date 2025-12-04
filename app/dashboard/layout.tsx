@@ -8,6 +8,7 @@ import {
   SidebarMenu,
   SidebarMenuItem,
   SidebarMenuButton,
+  SidebarTrigger,
 } from "@/components/ui/sidebar"
 import { LayoutDashboard, TrendingUp, Wallet } from "lucide-react"
 import Link from "next/link"
@@ -21,7 +22,12 @@ export default function DashboardLayout({
     <SidebarProvider>
       <Sidebar>
         <SidebarHeader className="border-b border-sidebar-border p-4">
-          <div className="text-xl font-bold gradient-text">FluxRisk</div>
+          <div className="flex items-center gap-3">
+            <div className="block md:hidden">
+              <SidebarTrigger />
+            </div>
+            <div className="text-xl font-bold gradient-text">FluxRisk</div>
+          </div>
         </SidebarHeader>
 
         <SidebarContent>
